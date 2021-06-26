@@ -2,7 +2,7 @@
 title: MIT 6.824 - Lab 1 - MapReduce 学习笔记
 description: MIT 6.824 Distributed System课程实验一：MapReduce学习笔记
 published: true
-date: 2021-06-26T09:16:59.586Z
+date: 2021-06-26T09:17:25.360Z
 tags: distributed-system, mit6.824, map-reduce, labs
 editor: markdown
 dateCreated: 2021-06-25T19:14:38.030Z
@@ -51,6 +51,8 @@ Example: word count
 5. 如果`worker`意外退出，或者长时间出现未响应的状况，`master`要重新分配对应`worker`的任务。
 
 ## 实现思路
+
+
 
 ## Reference
 
