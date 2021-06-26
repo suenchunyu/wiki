@@ -2,7 +2,7 @@
 title: MIT 6.824 - Lab 1 - MapReduce 学习笔记
 description: MIT 6.824 Distributed System课程实验一：MapReduce学习笔记
 published: true
-date: 2021-06-26T09:17:25.360Z
+date: 2021-06-26T09:31:20.276Z
 tags: distributed-system, mit6.824, map-reduce, labs
 editor: markdown
 dateCreated: 2021-06-25T19:14:38.030Z
@@ -52,7 +52,9 @@ Example: word count
 
 ## 实现思路
 
+首先整个MapReduce框架中主要的对象是`Worker`和`Master`，通过需求分析阶段和Lab中可针对`Master`总结如下几点：
 
+1. `Master`需要整理并维护所有输入的
 
 ## Reference
 
