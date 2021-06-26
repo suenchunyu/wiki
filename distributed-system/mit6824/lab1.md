@@ -2,7 +2,7 @@
 title: MIT 6.824 - Lab 1 - MapReduce 学习笔记
 description: MIT 6.824 Distributed System课程实验一：MapReduce学习笔记
 published: true
-date: 2021-06-25T19:33:28.109Z
+date: 2021-06-26T09:16:59.586Z
 tags: distributed-system, mit6.824, map-reduce, labs
 editor: markdown
 dateCreated: 2021-06-25T19:14:38.030Z
