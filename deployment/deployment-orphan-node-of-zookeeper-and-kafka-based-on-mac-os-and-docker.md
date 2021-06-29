@@ -2,7 +2,7 @@
 title: 在macOS下基于Docker部署单节点的Kafka以及ZooKeeper
 description: 在macOS下基于Docker部署开发环境使用的Kafka和ZooKeeper手记
 published: true
-date: 2021-06-29T09:36:32.740Z
+date: 2021-06-29T09:41:24.493Z
 tags: orphan, docker, zookeeper, kafka, docker-compose
 editor: markdown
 dateCreated: 2021-06-29T09:36:32.740Z
@@ -61,7 +61,11 @@ services:
 
 部署完成之后访问[http://localhost:3872](http://localhost:3872)即可看到连接界面：
 
+![login-for-zoonavigator.png](/login-for-zoonavigator.png)
 
+在macOS下我们可以使用`host.docker.internal:2181`来借助于Docker for Desktop提供的内部DNS机制来访问到我们的ZooKeeper服务。
+
+![zoonavigator-main.png](/zoonavigator-main.png)
 
 ## 使用Docker Compose部署单节点Kafka
 
