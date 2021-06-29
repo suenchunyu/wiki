@@ -2,7 +2,7 @@
 title: 在macOS下基于Docker部署单节点的Kafka以及ZooKeeper
 description: 在macOS下基于Docker部署开发环境使用的Kafka和ZooKeeper手记
 published: true
-date: 2021-06-29T09:41:24.493Z
+date: 2021-06-29T09:52:27.430Z
 tags: orphan, docker, zookeeper, kafka, docker-compose
 editor: markdown
 dateCreated: 2021-06-29T09:36:32.740Z
@@ -69,4 +69,30 @@ services:
 
 ## 使用Docker Compose部署单节点Kafka
 
+```yaml
+version: '3'
+
+networks:
+    default:
+        name: kafka-orphan
+
+services:
+    kafka-orphan:
+        image: wurstmeister/kafka
+        restart: always
+        container_name: kafka-orphan
+        hostname: kafka-orphan
+        ports:
+            - 9092:9092
+        environment:
+            KAFKA_BROKER_ID: 0
+            KAFKA_ZOOKEEPER_CONNECT: host.docker.internal:2181
+            KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://host.docker.internal:9092
+            KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+```
+
+运行`docker compose up -d`即可自动化的拉取镜像并创建对应容器。
+
 ## 验证Kafka是否可用
+
+可以使用[Xeotek KaDeck](https://www.xeotek.com/)连接Kafka进行验证。
